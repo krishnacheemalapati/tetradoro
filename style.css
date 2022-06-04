@@ -1,0 +1,39 @@
+.tetris-container {
+    margin: auto;
+    width:fit-content;
+}
+
+.tetris-game {
+    display: flex;
+    margin:auto;
+    width:fit-content;
+}
+
+.grid{
+    width: min(30vh, 30vw);
+    height: min(60vh, 60vw);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div{
+    content: url('./assets/white.png');
+    height: min(3vh, 3vw);
+    width: min(3vh, 3vw);
+}
+
+.up-next {
+    margin-left: 10vw;
+    width: min(12vh, 12vw);
+    height: min(12vh, 12vw);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+}
+
+.up-next div {
+    content: url('./assets/white.png');
+    height: min(3vh, 3vw);
+    width: min(3vh, 3vw);
+}
+
