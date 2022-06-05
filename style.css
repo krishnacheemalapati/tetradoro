@@ -1,39 +1,212 @@
+@font-face {
+    font-family: font;
+    src: url(./assets/font.ttf);
+}
+
+* {
+    font-family: font;
+    margin: 0px;
+}
+
+html {
+    background: url(./assets/beach3.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    transition: background-image 1s ease;
+    width: 100vw;
+    height: 100vh;
+}
+
+.super-container {
+    position: static;
+    top: 50vh;
+    left: 50vw;
+    padding: 3vh;
+    text-align: center;
+}
+
+.pomodoro-container {
+    text-align: center;
+    justify-content: center;
+}
+
+.timer-bar {
+    width: 100vw;
+    background-color: aquamarine;
+}
+
+.timer-progress {
+    width: 0vw;
+    height: 1vw;
+    background-color: bisque;
+}
+
+.invisible {
+    display: none !important;
+}
+
+.visible {
+    display: unset !important;
+}
+
 .tetris-container {
     margin: auto;
-    width:fit-content;
+    width: fit-content;
 }
 
 .tetris-game {
     display: flex;
-    margin:auto;
-    width:fit-content;
+    margin: auto;
+    width: fit-content;
 }
 
-.grid{
-    width: min(30vh, 30vw);
-    height: min(60vh, 60vw);
+.grid {
+    width: min(33vh, 32.2vw);
+    height: min(64.4vh, 64.4vw);
     display: flex;
     flex-wrap: wrap;
 }
 
-.grid div{
-    content: url('./assets/white.png');
+.grid div {
     height: min(3vh, 3vw);
     width: min(3vh, 3vw);
+    background-color: rgba(32, 178, 171, 0.5);
+    border-width: min(0.1vh, 0.1vw);
+    border-color: whitesmoke;
+    border-style: solid;
 }
 
 .up-next {
     margin-left: 10vw;
-    width: min(12vh, 12vw);
-    height: min(12vh, 12vw);
+    margin-right: 10vw;
+    width: min(12.9vh, 12.9vw);
+    height: min(12.9vh, 12.9vw);
     display: flex;
     flex-wrap: wrap;
-    background-color: aquamarine;
 }
 
 .up-next div {
-    content: url('./assets/white.png');
     height: min(3vh, 3vw);
     width: min(3vh, 3vw);
+    background-color: rgba(32, 178, 171, 0.5);
+    border-width: min(0.1vh, 0.1vw);
+    border-color: whitesmoke;
+    border-style: solid;
 }
 
+#start-button {
+    cursor: pointer;
+    box-shadow: rgb(182, 158, 130) 0px 1vh 0px;
+    font-size: 2vw;
+    height: 10vh;
+    color: rgb(182, 158, 130);
+    font-weight: bold;
+    width: 12vw;
+    background-color: bisque;
+    border-width: initial;
+    border-style: none;
+    padding: 0vh 1vh;
+    padding-bottom: 1.5vh;
+    border-radius: 1vh;
+    outline: none;
+}
+
+#pom-button {
+    cursor: pointer;
+    box-shadow: rgb(182, 158, 130) 0px 1vh 0px;
+    font-size: 2vw;
+    height: 10vh;
+    color: rgb(182, 158, 130);
+    font-weight: bold;
+    width: 12vw;
+    background-color: bisque;
+    border-width: initial;
+    border-style: none;
+    padding: 0vh 1vh;
+    padding-bottom: 1.5vh;
+    border-radius: 1vh;
+    outline: none;
+}
+
+#start-button.active {
+    transform: translateY(1vh);
+    box-shadow: none;
+    outline: none;
+}
+
+#pom-button.active {
+    transform: translateY(1vh);
+    box-shadow: none;
+    outline: none;
+}
+
+#pom-time-left {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding-bottom: 1.5vh;
+    font-size: 5vw;
+    line-height: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transform: translateY(-1.5vh);
+}
+
+#game-time-left {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-size: 3vw;
+    line-height: 1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transform: translateY(-1.5vh);
+}
+
+.tetradoro-text {
+    height: fit-content;
+    width: fit-content;
+    box-shadow: none;
+    padding: 0.1vh 0.1vw;
+    background: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(32, 178, 171, 0.5);
+    border-radius: 2vh;
+    margin-top: 10vh;
+}
+
+.tetra.active, .doro.active{
+    color: rgb(182, 158, 130);
+}
+
+.tetra, .doro, .timer {
+    font-size: 5vw;
+    width: fit-content;
+    transform: translateY(-2.5vh);
+}
+
+h3 {
+    font-size: 3vw;
+    padding-bottom: 1.5vw
+}
+
+.tetra, .doro {
+    cursor: pointer;
+}
+
+#score {
+    white-space: pre-line;
+    font-size: 3vw;
+    text-align: center;
+    justify-content: center;
+}
